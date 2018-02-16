@@ -24,7 +24,7 @@ introduction
  ### What is Distillation          
 
 Neural networks typically produce class probabilities by using a “softmax” output layer that converts the logit, zi, computed for each class into a probability, qi, by comparing zi with the other logits.				
-$$q_i=\frac{exp(z_i/T)}{\sum_{j}{exp(z_j/T)}}$$
+$$ q_i=\frac{exp(z_i/T)}{\sum_{j}{exp(z_j/T)}} $$
 where T is a temperature that is normally set to 1. Using a higher value for T produces a softer probability distribution over classes. 
 In the simplest form of distillation, knowledge is transferred to the distilled model by training it on a transfer set and using a soft target distribution for each case in the transfer set that is produced by using the cumbersome model with a high temperature in its softmax. The same high temperature is used when training the distilled model, but after it has been trained it uses a temperature of 1. It could reduce the computing resources required to run a network, allowing usage on a smaller scale like in embedded chips and IoT devices.
 
@@ -32,6 +32,7 @@ In the simplest form of distillation, knowledge is transferred to the distilled 
 1)A Deep Neural Network(DNN) is trained with a high temperature, the T we mentioned before.The training of this first DNN is a high temperature because the high temperature forces the DNN to produce probability vectors with relatively large values for each class. The high temperature of a softmax is, the more ambiguous its probability distribution will be. The smaller the temperature of a softmax is, the more discrete its probability distribution will be. 
 
 2)A second Deep Neural Network is trained by replacing the hard labels of the training set with class probabilities output by the first Deep Neural Network.
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/DNN.png )
 
 ### Softmax Function under distillation 
 Softmax function is the Last layer of network. It’s used to normalize the outputs of the second to last layer. Under distillation situation, it has a parameter temperature (T)
