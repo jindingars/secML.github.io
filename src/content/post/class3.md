@@ -52,9 +52,13 @@ This paper evaluated Resilience, Sensitivity and Robustness on 2 datasets: MNIST
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/table.png )
 <div class="caption">
-Resilience: success rate of adversarial crafting.<\br>
-Sensitivity: amplitude of adversarial gradients.\n
-Robustness: amount of perturbation required to achieve adversarial targets.\n
+Resilience: success rate of adversarial crafting.
+</div>
+<div class="caption">
+  Sensitivity: amplitude of adversarial gradients.
+</div>
+<div class="caption">
+  Robustness: amount of perturbation required to achieve adversarial targets.
 </div>
 
 This paper also evaluated effect of Temperature on Adversarial Success
