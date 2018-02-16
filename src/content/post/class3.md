@@ -38,7 +38,7 @@ In the simplest form of distillation, knowledge is transferred to the distilled 
 Softmax function is the Last layer of network. It’s used to normalize the outputs of the second to last layer. Under distillation situation, it has a parameter temperature (T)
 To perform distillation in softmax layer, a large network whose output layer is softmax is first trained on the original dataset. The softmax layer is a layer that considers a vector Z(X) of outputs produced by the last hidden layer of a DNN. Then we normalizes them into a probability vector F(X), the output of DNN assigning a probability to each class of dataset for input X. T means temperature and shared across the softmax layer.
 
-![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/equation.png )
+$$ F(X)=\left [\frac{exp(z_i(X)/T)}{\sum_{l=0}^{N-1}{exp(z_l(X)/T)}  }\right ]_{i\epsilon 0,1...N-1} $$
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/softmax.png )
 
@@ -51,9 +51,11 @@ In distillation as a defense, the same network architecture is used in the disti
 This paper evaluated Resilience, Sensitivity and Robustness on 2 datasets: MNIST and CIFAR10
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/table.png )
+<div class="caption">
 Resilience: success rate of adversarial crafting.
 Sensitivity: amplitude of adversarial gradients.
 Robustness: amount of perturbation required to achieve adversarial targets.
+</div>
 
 This paper also evaluated effect of Temperature on Adversarial Success
 Success of adversarial samples when changing at most 112 features.
