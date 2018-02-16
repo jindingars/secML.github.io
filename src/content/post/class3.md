@@ -38,36 +38,28 @@ In the simplest form of distillation, knowledge is transferred to the distilled 
 Softmax function is the Last layer of network. It’s used to normalize the outputs of the second to last layer. Under distillation situation, it has a parameter temperature (T)
 To perform distillation in softmax layer, a large network whose output layer is softmax is first trained on the original dataset. The softmax layer is a layer that considers a vector Z(X) of outputs produced by the last hidden layer of a DNN. Then we normalizes them into a probability vector F(X), the output of DNN assigning a probability to each class of dataset for input X. T means temperature and shared across the softmax layer.
 
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/equation.png )
+
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/softmax.png )
+
 ### Using Distillation as a Defense
 In distillation as a defense, the same network architecture is used in the distilled DNN as in the original DNN. First, this paper trained an initial network F on data X with a softmax temperature of T. Then, this paper use the probability vector F(X), which includes additional knowledge about classes compared to a class label, predicted by network F to train a distilled network  at temperature T on the same data X. The definition and calculation of F(X) can be found in softmax part and  the detailed training process is described in “how distillation works” part. 
+
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/defense.png )
 
 ### Results
 This paper evaluated Resilience, Sensitivity and Robustness on 2 datasets: MNIST and CIFAR10
 
-
-
-MNIST original
-MNIST distilled
-CIFAR10 original
-CIFAR10 distilled
-Resilience
-95.89%
-0.45%
-87.89%
-5.11%
-Sensitivity
-Distillation performed at high temperatures decreased the magnitude of adversarial gradients by up to 10^30
-Robustness
-1.55%
-14.08%
-0.39%
-2.57%
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/table.png )
 Resilience: success rate of adversarial crafting.
 Sensitivity: amplitude of adversarial gradients.
 Robustness: amount of perturbation required to achieve adversarial targets.
 
 This paper also evaluated effect of Temperature on Adversarial Success
 Success of adversarial samples when changing at most 112 features.
+
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/res.png )
+But actually Defensive Distillation is not robust to adversarial examples.
 
 ### Why Distillation Seems to Work
 First some attacks use the gradient of the logits, where softmax do not work here. Second, big difference in relative impact of changes in input to the softmax layer. Third, training at temperature T effectively increases all inputs to the softmax layer by a factor of T, for example, Undistilled logits with Mean of 5.8/std of 6.4 and Distilled logits (T=100) with Mean of 482/std of 457
