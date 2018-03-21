@@ -21,6 +21,7 @@ advertising platform collects about a user either online or offline; (b) the dat
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/b.png)
 
 (3) The user-ad matching process takes place whenever someone is eligible to see an ad. It examines all the ad campaigns placed by different advertisers in a particular time interval, their bids, and runs an auction to determine which ads are selected.
+
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/c.png)
 
 
