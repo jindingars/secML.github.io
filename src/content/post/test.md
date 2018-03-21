@@ -29,6 +29,7 @@ advertising platform collects about a user either online or offline; (2) the dat
 ### Ad Explanations and the experiments on this transparency mechanism
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/WhySeeingThis.png)
+
 As you can see in the picture, There're attritubutes and potentional attritubutes here. 
 This paper used 5 different properties to evaluate the performance of Ad explanations:</br>
 1. Correctness: Every attribute listed was used by the advertiser</br>
@@ -41,7 +42,7 @@ The experiment this paper did to evaluate the ad explanations is using Chrome br
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/stat.png)
 
-Data Explanations and the experiments on this transparency mechanism
+### Data Explanations and the experiments on this transparency mechanism
 
 The data explanations is applied in "Your interests" part as shown in the following picture. 
 
@@ -49,7 +50,9 @@ The data explanations is applied in "Your interests" part as shown in the follow
 
 The properties here are not the same as those used in the Ad explanation part. There are 3 new properties.
 1. Specificity: A data explanation is precise if it shows the precise activities that were used to infer an attribute about a user.
+
 2. Snapshot completeness: A data explanation is snapshot complete if the explanation shows all the inferred attributes about the user that Facebook makes available.
+
 3.Temporal completeness: a temporally complete explanation is one where the platform shows all inferred attributes over a specified period of time.
 
 The results of different properties on this experiment are showed in the following picture.
