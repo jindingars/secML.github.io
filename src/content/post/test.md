@@ -11,16 +11,17 @@ This paper mainly did an investigation and analysis of ad explanations, or why u
 
 ### The Ad platform in Facebook
 
-There are three main processes in facebook ad platform: 1) the data inference process; 2) the audience selection process; 3) the user-ad matching process <\br>
-(1) The data inference process is the process that allows the advertising platform to learn the users’ attributes. It has three parts: (a) the raw user data (the inputs), containing the information the
-advertising platform collects about a user either online or offline; (b) the data inference algorithm (the mapping function between inputs and outputs), covering the algorithm the advertising platform uses to translate input user data to targeting attributes;(c) the resulting targeting attributes (the outputs) of each user that advertisers can specify to select different groups of users.
+There are three main processes in facebook ad platform: a) the data inference process; b) the audience selection process; c) the user-ad matching process.
+
+(a) The data inference process is the process that allows the advertising platform to learn the users’ attributes. It has three parts: (1) the raw user data (the inputs), containing the information the
+advertising platform collects about a user either online or offline; (2) the data inference algorithm (the mapping function between inputs and outputs), covering the algorithm the advertising platform uses to translate input user data to targeting attributes;(3) the resulting targeting attributes (the outputs) of each user that advertisers can specify to select different groups of users.
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/a.png)
 
-(2) The audience selection process is the interface that allows advertisers to express who should receive their ads. Advertisers create audiences by specifying the set of targeting attributes the audience needs to satisfy. Later, to launch an ad campaign, advertisers also need to specify a bid price and an optimization criterion.
+(b) The audience selection process is the interface that allows advertisers to express who should receive their ads. Advertisers create audiences by specifying the set of targeting attributes the audience needs to satisfy. Later, to launch an ad campaign, advertisers also need to specify a bid price and an optimization criterion.
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/b.png)
 
-(3) The user-ad matching process takes place whenever someone is eligible to see an ad. It examines all the ad campaigns placed by different advertisers in a particular time interval, their bids, and runs an auction to determine which ads are selected.
+(c) The user-ad matching process takes place whenever someone is eligible to see an ad. It examines all the ad campaigns placed by different advertisers in a particular time interval, their bids, and runs an auction to determine which ads are selected.
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/c.png)
 
