@@ -15,22 +15,24 @@ There are three main processes in facebook ad platform: 1) the data inference pr
 (1) The data inference process is the process that allows the advertising platform to learn the users’ attributes. It has three parts: (a) the raw user data (the inputs), containing the information the
 advertising platform collects about a user either online or offline; (b) the data inference algorithm (the mapping function between inputs and outputs), covering the algorithm the advertising platform uses to translate input user data to targeting attributes;(c) the resulting targeting attributes (the outputs) of each user that advertisers can specify to select different groups of users.
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/a.png)
+
 (2) The audience selection process is the interface that allows advertisers to express who should receive their ads. Advertisers create audiences by specifying the set of targeting attributes the audience needs to satisfy. Later, to launch an ad campaign, advertisers also need to specify a bid price and an optimization criterion.
-![](/images/content/b.png)
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/b.png)
+
 (3) The user-ad matching process takes place whenever someone is eligible to see an ad. It examines all the ad campaigns placed by different advertisers in a particular time interval, their bids, and runs an auction to determine which ads are selected.
-pictures!!!
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/c.png)
 
 
-Ad Explanations and the experiments on this transparency mechanism
+### Ad Explanations and the experiments on this transparency mechanism
 
-图（why am I seeing this）
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/WhySeeingThis.png)
 As you can see in the picture, There're attritubutes and potentional here. 
-This paper used 5 different properties to evaluate the performance of Ad explanations:
-1. Correctness: Every attribute listed was used by the advertiser
-2. Personalization: The attributes listed are unique to the individual
-3. Completeness: If all relevant attributes are included in the explanation
-4. Consistency: Users with the same attributes see the same explanations
-5. Determinism: A user would see the same explanation for ads based on the same target attributes
+This paper used 5 different properties to evaluate the performance of Ad explanations:</br>
+1. Correctness: Every attribute listed was used by the advertiser</br>
+2. Personalization: The attributes listed are unique to the individual</br>
+3. Completeness: If all relevant attributes are included in the explanation</br>
+4. Consistency: Users with the same attributes see the same explanations</br>
+5. Determinism: A user would see the same explanation for ads based on the same target attributes</br>
 
 The experiment this paper did to evaluate the ad explanations is using Chrome browser extension to record ads and explanations. The experiment had 35 users' data across 5 months. This experiment also did to evaluate the data explanation. This paper made simple statistics for the explanation(See the following figure). And then, it shows the results of different properties on this experiment.
 
