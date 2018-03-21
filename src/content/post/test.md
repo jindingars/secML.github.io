@@ -51,7 +51,7 @@ The data explanations is applied in "Your interests" part as shown in the follow
 The properties here are not the same as those used in the Ad explanation part. There are 3 new properties.
 1. Specificity: A data explanation is precise if it shows the precise activities that were used to infer an attribute about a user.
 2. Snapshot completeness: A data explanation is snapshot complete if the explanation shows all the inferred attributes about the user that Facebook makes available.
-3.Temporal completeness: a temporally complete explanation is one where the platform shows all inferred attributes over a specified period of time.
+3. Temporal completeness: a temporally complete explanation is one where the platform shows all inferred attributes over a specified period of time.
 
 The results of different properties on this experiment are showed in the following picture.
 
