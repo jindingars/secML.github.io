@@ -11,7 +11,7 @@ This paper mainly did an investigation and analysis of ad explanations, or why u
 
 ### The Ad platform in Facebook
 
-There are three main processes in facebook ad platform: 1) the data inference process; 2) the audience selection process; 3) the user-ad matching process
+There are three main processes in facebook ad platform: 1) the data inference process; 2) the audience selection process; 3) the user-ad matching process <\br>
 (1) The data inference process is the process that allows the advertising platform to learn the users’ attributes. It has three parts: (a) the raw user data (the inputs), containing the information the
 advertising platform collects about a user either online or offline; (b) the data inference algorithm (the mapping function between inputs and outputs), covering the algorithm the advertising platform uses to translate input user data to targeting attributes;(c) the resulting targeting attributes (the outputs) of each user that advertisers can specify to select different groups of users.
 
@@ -28,7 +28,7 @@ advertising platform collects about a user either online or offline; (b) the dat
 ### Ad Explanations and the experiments on this transparency mechanism
 
 ![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/WhySeeingThis.png)
-As you can see in the picture, There're attritubutes and potentional here. 
+As you can see in the picture, There're attritubutes and potentional attritubutes here. 
 This paper used 5 different properties to evaluate the performance of Ad explanations:</br>
 1. Correctness: Every attribute listed was used by the advertiser</br>
 2. Personalization: The attributes listed are unique to the individual</br>
@@ -38,14 +38,23 @@ This paper used 5 different properties to evaluate the performance of Ad explana
 
 The experiment this paper did to evaluate the ad explanations is using Chrome browser extension to record ads and explanations. The experiment had 35 users' data across 5 months. This experiment also did to evaluate the data explanation. This paper made simple statistics for the explanation(See the following figure). And then, it shows the results of different properties on this experiment.
 
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/stat.png)
+
 Data Explanations and the experiments on this transparency mechanism
 
-The data explanations is applied in "Your interests" part as shown in the following picture. The properties here are not the same as those used in the Ad explanation part. There are 3 new properties.
+The data explanations is applied in "Your interests" part as shown in the following picture. 
+
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/like.png)
+
+The properties here are not the same as those used in the Ad explanation part. There are 3 new properties.
 1. Specificity: A data explanation is precise if it shows the precise activities that were used to infer an attribute about a user.
 2. Snapshot completeness: A data explanation is snapshot complete if the explanation shows all the inferred attributes about the user that Facebook makes available.
 3.Temporal completeness: a temporally complete explanation is one where the platform shows all inferred attributes over a specified period of time.
 
 The results of different properties on this experiment are showed in the following picture.
+
+
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/DataRes.png)
 
 While the Ad Preferences Page does bring some transparency to the different attributes users can be targeted with,
 the provided explanations are incomplete and often vague. Facebook does not provide information about data-brokerprovided attributes in its data explanations or in its ad explanations
