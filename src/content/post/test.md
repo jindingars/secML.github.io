@@ -9,12 +9,14 @@ Transparency mechanisms are solutions for many privacy complaints from users and
 
 This paper mainly did an investigation and analysis of ad explanations, or why users see a certain ad and an investigation of data explanations, or how data is inferred about a user, which is strongly related to the ad transparency mechanisms in Facebook. This paper first introduced how ad platform in facebook works and then evaluate the two transparency mechanisms we introduced before with some properties.
 
-The Ad platform in Facebook
+### The Ad platform in Facebook
+
 There are three main processes in facebook ad platform: 1) the data inference process; 2) the audience selection process; 3) the user-ad matching process
 (1) The data inference process is the process that allows the advertising platform to learn the users’ attributes. It has three parts: (a) the raw user data (the inputs), containing the information the
 advertising platform collects about a user either online or offline; (b) the data inference algorithm (the mapping function between inputs and outputs), covering the algorithm the advertising platform uses to translate input user data to targeting attributes;(c) the resulting targeting attributes (the outputs) of each user that advertisers can specify to select different groups of users.
-
+![](https://github.com/jindingars/secML.github.io/blob/master/src/content/images/a.png)
 (2) The audience selection process is the interface that allows advertisers to express who should receive their ads. Advertisers create audiences by specifying the set of targeting attributes the audience needs to satisfy. Later, to launch an ad campaign, advertisers also need to specify a bid price and an optimization criterion.
+![](/images/content/b.png)
 (3) The user-ad matching process takes place whenever someone is eligible to see an ad. It examines all the ad campaigns placed by different advertisers in a particular time interval, their bids, and runs an auction to determine which ads are selected.
 pictures!!!
 
