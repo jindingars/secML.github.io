@@ -46,12 +46,15 @@ To better understand the efficacy of a robust PCA algorithm, this paper demonstr
 ![](/images/pcagrid.png)
 
 Here the data has been projected into the 2D space spanned by the 1st principal component and the direction of the attack flow. The effect on the 1st principal components of PCA and PCA-GRID is shown under a globally informed attack (represented by points).
+
 ![](/images/poison.png)
 
 #### Robust Laplace Threshold
 
 Instead of the normal distribution assumed by the Q-statistic, this paper use the quantiles of a Laplace distribution specified by a location parameter c and a scale parameter b. Critically, though, instead of using the mean and standard deviation, this paper robustly fit the distribution’s parameters. Then, they estimate c and b from the residuals ya(t)2 using robust consistent estimates of location (median) and scale (MAD)
+
 ![](/images/estimate.png)
+
 where P^{−1}(q) is the qth quantile of the standard Laplace
 distribution. The Laplace quantile function has the form $$P^{−1}_{c,b}(q) = c+b·k(q) for some k(q)
 
