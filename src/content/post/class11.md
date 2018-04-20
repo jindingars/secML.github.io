@@ -174,7 +174,7 @@ the link exceeds a parameter α (we typically use the mean). The amount of chaff
 ##### Globally-informed
 
 Omnipotent adversary with knowledge of past, present, and future network traffic. Selects a link to poison and amount of chaff to add by solving an optimization problem. The optimization problem is as follow:
-![](https://github.com/jindingars/secML.github.io/blob/master/images/global.png)
+![](/images/global.png)
 
 In this optimization problem, as we introduced before, Y contains time series of all links; A is the rounting matrix; C is the amount of chaff; $$ \widetilde{y_t} $$ is the link volume in future time t;  μ is mean traffic vector; θ is a constant constraining total chaff.
 
