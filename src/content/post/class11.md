@@ -174,7 +174,7 @@ the link exceeds a parameter α (we typically use the mean). The amount of chaff
 ##### Globally-informed
 
 Omnipotent adversary with knowledge of past, present, and future network traffic. Selects a link to poison and amount of chaff to add by solving an optimization problem. The optimization problem is as follow:
-![](/images/global.png)
+![](/images/class11/global.png)
 
 In this optimization problem, as we introduced before, Y contains time series of all links; A is the rounting matrix; C is the amount of chaff; $$ \widetilde{y_t} $$ is the link volume in future time t;  μ is mean traffic vector; θ is a constant constraining total chaff.
 
@@ -183,7 +183,9 @@ In this optimization problem, as we introduced before, Y contains time series of
 This paper propose an approach searches for directions that maximize a robust scale estimate of the data projection to make PCA robust. Together with a new robust Laplace threshold, they form a new network-wide traffic anomaly detection method, Antidote. To mitigate the effect of poisoning attacks, this paper needs a learning algorithm that is stable in spite of data contamination. So the robust PCA can be that learning algorithm since robust is the formal term used to qualify this notion of stability.
 
 The aim of a robust PCA is to construct a low dimensional subspace that captures most of the data’s dispersion and are stable under data contamination. The robust PCA algorithms we considered search for a unit direction v whose projections maximize some univariate dispersion measure S(·); that is
-![](/images/equation4.png)
+
+![](/images/class11/equation4.png)
+
 The standard deviation is the dispersion measure used by PCA;
 
 Unlike the eigenvector solutions that arise in PCA, there is generally no efficiently computable solution for robust dispersion measures and so these must be approximated. So this paper proposed PCA-GRID, which is a successful method for approximating robust PCA subspaces.
@@ -191,22 +193,22 @@ Unlike the eigenvector solutions that arise in PCA, there is generally no effici
 To better understand the efficacy of a robust PCA algorithm, this paper demonstrate the effect our poisoning techniques have on the PCA algorithm and contrast them with the effect on the PCA-GRID algorithm
 
 #### PCA-GRID
-![](/images/pcagrid.png)
+![](/images/class11/pcagrid.png)
 
 Here the data has been projected into the 2D space spanned by the 1st principal component and the direction of the attack flow. The effect on the 1st principal components of PCA and PCA-GRID is shown under a globally informed attack (represented by points).
 
-![](/images/poison.png)
+![](/images/class11/poison.png)
 
 #### Robust Laplace Threshold
 
 Instead of the normal distribution assumed by the Q-statistic, this paper use the quantiles of a Laplace distribution specified by a location parameter c and a scale parameter b. Critically, though, instead of using the mean and standard deviation, this paper robustly fit the distribution’s parameters. Then, they estimate c and b from the residuals ya(t)2 using robust consistent estimates of location (median) and scale (MAD)
 
-![](/images/estimate.png)
+![](/images/class11/estimate.png)
 
 where P^{−1}(q) is the qth quantile of the standard Laplace
 distribution. The Laplace quantile function has the form $$P^{−1}_{c,b}(q) = c+b·k(q) for some k(q)
 
-![](/images/pcapcagrid.png)
+![](/images/class11/pcapcagrid.png)
 
 
 
